@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import software.amazon.awssdk.services.s3.S3Client;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -14,6 +13,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/images")
+@CrossOrigin
 public class ImageController {
 
     @Autowired
@@ -32,6 +32,6 @@ public class ImageController {
     }
     @GetMapping("/search")
     public List<String> searchImages(@RequestParam String query) {
-        return imageService.searchImagesByLabel(query);
+        return imageService.searchImagesUrlByLabel(query);
     }
 }

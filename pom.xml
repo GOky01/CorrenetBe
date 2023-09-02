@@ -39,7 +39,6 @@
             <artifactId>s3</artifactId>
             <version>2.20.135</version>
         </dependency>
-
         <dependency>
             <groupId>software.amazon.awssdk</groupId>
             <artifactId>rekognition</artifactId>
@@ -47,18 +46,14 @@
         </dependency>
 
         <dependency>
-           <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>javax.persistence</groupId>
-            <artifactId>javax.persistence-api</artifactId>
-            <version>2.2</version> <!-- use the version suitable for your setup -->
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.33</version>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>
